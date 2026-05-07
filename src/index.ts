@@ -1,5 +1,10 @@
-const userName: string = 'User'
-const version: number = 1.0
-const isReady: boolean = true
+import { createMessage } from "./utils.js";
+import { loadConfig, saveConfig } from "./config.js";
+import type { ChatConfig } from "./types.js";
 
-console.log(`${userName} v${version} ready: ${isReady}`);
+const config = loadConfig()
+console.log('Config loaded:', config.model)
+
+const msg = createMessage('user', 'Hello')
+console.log(msg)
+
