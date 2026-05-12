@@ -6,8 +6,8 @@ const CONFIG_DIR = join(process.cwd(), '.ai-chat')
 const CONFIG_FILE = join(CONFIG_DIR, 'config.json')
 
 export const DEFAULT_CONFIG : ChatConfig = {
-    apiKey: '',
-    model: 'gpt-4o-mini',
+    apiKey: process.env.DEEPSEEK_API_KEY ?? '',
+    model: 'deepseek-chat',
     maxTokens: 2000,
     temperature: 0.7
 }
